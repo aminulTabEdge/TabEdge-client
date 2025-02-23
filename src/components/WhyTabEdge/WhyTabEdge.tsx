@@ -9,7 +9,7 @@ const WhyTabEdge = () => {
       <div className="absolute inset-0 bg-black/20"></div>
 
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full max-w-7xl mx-auto text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Why Bank with TabEdge?</h1>
+        <h1 className="text-4xl font-semibold">Why Bank with TabEdge?</h1>
         <p className="mt-4 text-lg">
           Enjoy seamless international banking with our secure, fast, and
           reliable services.
@@ -20,7 +20,7 @@ const WhyTabEdge = () => {
           {/* Safe and secure */}
           <div className="flex flex-col items-center">
             <RiSecurePaymentLine className="text-5xl text-yellow-400" />
-            <h2 className="text-3xl mt-2">Safe & Secure</h2>
+            <h2 className="text-3xl mt-2 font-semibold">Safe & Secure</h2>
             <p className="mt-3 text-gray-200">
               Your personal and financial information are secured by ISO
               standards.
@@ -29,7 +29,9 @@ const WhyTabEdge = () => {
           {/* Licensed & Regulated */}
           <div className="flex flex-col items-center">
             <TbLicense className="text-5xl text-green-400" />
-            <h2 className="text-3xl mt-2">Licensed & Regulated</h2>
+            <h2 className="text-3xl mt-2 font-semibold">
+              Licensed & Regulated
+            </h2>
             <p className="mt-3 text-gray-200">
               Bank with confidence, knowing our operations are fully regulated.
             </p>
@@ -37,7 +39,7 @@ const WhyTabEdge = () => {
           {/* Protected Funds */}
           <div className="flex flex-col items-center">
             <RiBankLine className="text-5xl text-blue-400" />
-            <h2 className="text-3xl mt-2">Protected Funds</h2>
+            <h2 className="text-3xl mt-2 font-semibold">Protected Funds</h2>
             <p className="mt-3 text-gray-200">
               We are a full reserve bank. 100% of your funds are kept in the
               bank at all times.

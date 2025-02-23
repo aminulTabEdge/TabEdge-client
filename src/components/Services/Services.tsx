@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 const Services = () => {
   return (
-    <section className="container mx-auto py-10">
+    <section className="container mx-auto ">
       <SectionHeading title="Our Services" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         <div className="bg-white p-6 space-y-4 shadow-lg rounded-lg flex flex-col justify-evenly">
