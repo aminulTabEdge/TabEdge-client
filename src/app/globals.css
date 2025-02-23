@@ -5,9 +5,8 @@
 
 body {
   font-family: "Poppins", serif;
+  background-color: #f2f4f8;
 }
-
-
 
 @layer base {
   :root {
@@ -64,8 +63,6 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
-
-
 
 @layer base {
   * {
