@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-import SectionHeading from "../TypoGraphy/SectionHeading";
+import SectionHeading from "../ui/SectionHeading";
 
 const ContactUs: React.FC = () => {
   return (

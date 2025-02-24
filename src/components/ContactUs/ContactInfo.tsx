@@ -15,13 +15,10 @@ const ContactInfo: React.FC = () => {
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
           Contact Information
         </h2>
-        <ul className="space-y-4">
+        <ul className="space-y-2">
           {contactDetails.map(({ id, icon: Icon, text }) => (
-            <li
-              key={id}
-              className="flex items-center  p-2 rounded-lg shadow-sm"
-            >
-              <div className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-lg">
+            <li key={id} className="flex items-center">
+              <div className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white ">
                 <Icon size={20} />
               </div>
               <span className="ml-4  font-medium">{text}</span>

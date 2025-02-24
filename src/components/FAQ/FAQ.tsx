@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SectionHeading from "../TypoGraphy/SectionHeading";
+import SectionHeading from "../ui/SectionHeading";
 
 const FAQ = () => {
   return (

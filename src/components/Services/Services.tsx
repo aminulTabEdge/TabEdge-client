@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeading from "../TypoGraphy/SectionHeading";
+import SectionHeading from "../ui/SectionHeading";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
