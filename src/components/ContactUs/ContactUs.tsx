@@ -5,7 +5,7 @@ import SectionHeading from "../ui/SectionHeading";
 
 const ContactUs: React.FC = () => {
   return (
-    <div className="relative px-4 py-12 bg-[url('/background/white-polyshape.jpg')] bg-cover bg-center bg-opacity-50">
+    <div className="relative px-4 py-12 lg:py-24 bg-[url('/background/white-polyshape.jpg')] bg-cover bg-center bg-opacity-50">
       {/* Gradient Overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-[#f2f4f8] to-blue-900 opacity-40"></div> */}
       {/* Content Section */}

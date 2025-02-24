@@ -1,20 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { CiMenuFries } from "react-icons/ci";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { BsArrowRight } from "react-icons/bs";
-import Image from "next/image";
 
-const Navbar = () => {
+// react icons
+import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
+import { FaDiscord } from "react-icons/fa";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { CiMenuFries } from "react-icons/ci";
+import { MdDashboardCustomize, MdKeyboardArrowDown } from "react-icons/md";
+import { BsArrowRight } from "react-icons/bs";
+import { CgIfDesign } from "react-icons/cg";
+import { FaCubesStacked } from "react-icons/fa6";
+
+const ResponsiveNavbar = () => {
   const [mobileAboutUsOpen, setMobileAboutUsOpen] = useState(false);
   const [mobileServiceOpen, setMobileServiceOpen] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between w-full relative h-auto  ">
+    <nav className="flex items-center justify-between w-full relative h-auto">
       {/* logo */}
-      <Image src={"/logo.webp"} width={130} height={50} alt="TabEdge Logo" />
+      <img
+        src="https://i.ibb.co/0BZfPq6/darklogo.png"
+        alt="logo"
+        className="w-[60px] "
+      />
 
       {/* nav links */}
       <ul className="items-center gap-[20px] text-[1rem] text-[#424242] md:flex hidden">
@@ -27,22 +36,49 @@ const Navbar = () => {
           about us
           <MdKeyboardArrowDown className="text-[1.5rem] text-[#424242] group-hover:text-[#3B9DF8] transition-all duration-500 group-hover:rotate-[180deg]" />
           <article className="p-6 bg-white rounded-md boxShadow w-[500px] absolute top-[40px] z-[-1] left-[-100px] group-hover:translate-y-0 translate-y-[-20px] group-hover:opacity-100 opacity-0 group-hover:z-30 transition-all duration-300">
-            <div>
+            <div className="grid grid-cols-2">
               <ul className="flex flex-col gap-[7px] text-[#424242]">
                 <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
                   Company Details
                 </li>
                 <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />
                   Company Location
                 </li>
                 <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />
                   Team Members
                 </li>
                 <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
                   Office Tour
                 </li>
               </ul>
+
+              <div className="flex flex-col gap-[10px] border-l border-[#e5eaf2] pl-[30px]">
+                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                  <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
+                  Full Customize
+                </div>
+
+                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                  <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
+                  Modern Design
+                </div>
+
+                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                  <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
+                  Well Stacktured
+                </div>
+              </div>
             </div>
+
+            <img
+              src="https://i.ibb.co/YRgsrsh/AD22-04.png"
+              alt="image"
+              className="w-full object-cover mt-4 rounded-sm h-[150px]"
+            />
           </article>
         </li>
 
@@ -70,13 +106,45 @@ const Navbar = () => {
                   Office Tour
                 </li>
               </ul>
+
+              <div className="flex flex-col gap-[10px] border-l border-[#e5eaf2] pl-[30px]">
+                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                  <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
+                  Full Customize
+                </div>
+
+                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                  <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
+                  Modern Design
+                </div>
+
+                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                  <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
+                  Well Stacktured
+                </div>
+              </div>
             </div>
+
+            <img
+              src="https://i.ibb.co/XJJ4mNY/AD21-03.png"
+              alt="image"
+              className="w-full object-cover mt-4 rounded-sm h-[150px]"
+            />
           </article>
         </li>
       </ul>
 
       <div className="flex items-center gap-[10px]">
-        <button>Account</button>
+        <div className="relative md:flex hidden">
+          <input
+            className="py-1.5 pr-4 border border-[#424242] pl-10 rounded-full outline-none focus:border-[#3B9DF8]"
+            placeholder="Search..."
+          />
+          <IoIosSearch className="absolute top-[9px] left-3 text-[#424242] text-[1.3rem]" />
+        </div>
+
+        <FaDiscord className="text-[1.6rem] text-[#424242] cursor-pointer hover:text-[#3B9DF8] transition-all duration-500 " />
+        <TbBrandGithubFilled className="text-[1.6rem] text-[#424242] cursor-pointer hover:text-[#3B9DF8] transition-all duration-500" />
 
         <CiMenuFries
           className="text-[1.6rem] text-[#424242]c cursor-pointer md:hidden flex"
@@ -121,18 +189,35 @@ const Navbar = () => {
                 Company Details
               </li>
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-             
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
                 Company Location
               </li>
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-              
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
                 Team Members
               </li>
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-             Office
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" /> Office
                 Tour
               </li>
             </ul>
+
+            <div className="flex flex-col gap-[10px] mt-4">
+              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
+                Full Customize
+              </div>
+
+              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
+                Modern Design
+              </div>
+
+              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
+                Well Stacktured
+              </div>
+            </div>
           </div>
 
           <li
@@ -155,18 +240,39 @@ const Navbar = () => {
           >
             <ul className="flex flex-col gap-[7px] text-[#424242]">
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
                 Company Details
               </li>
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
                 Company Location
               </li>
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
                 Team Members
               </li>
               <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                Office Tour
+                <BsArrowRight className="text-[#424242] text-[0.9rem]" /> Office
+                Tour
               </li>
             </ul>
+
+            <div className="flex flex-col gap-[10px] mt-4">
+              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
+                Full Customize
+              </div>
+
+              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
+                Modern Design
+              </div>
+
+              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
+                <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
+                Well Stacktured
+              </div>
+            </div>
           </div>
         </ul>
       </aside>
@@ -174,4 +280,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ResponsiveNavbar;

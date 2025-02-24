@@ -8,6 +8,7 @@ import {
   FaShieldAlt,
   FaCar,
 } from "react-icons/fa";
+import SectionHeading from "../ui/SectionHeading";
 
 const includedFeatures = [
   { id: 1, icon: FaDollarSign, text: "USD Personal Current Account" },
@@ -16,8 +17,8 @@ const includedFeatures = [
   { id: 4, icon: FaMoneyCheckAlt, text: "No Account Funding Charges**" },
   {
     id: 5,
-    icon: FaMoneyCheckAlt,
-    text: "Limitless ACH Payments, TabEdge Transfers, and Wire Transfer",
+    icon: FaFileInvoice, // Changed to avoid duplication
+    text: "Limitless ACH Payments, TabEdge Transfers, and Wire Transfers",
   },
   {
     id: 6,
@@ -34,16 +35,14 @@ const includedFeatures = [
 
 const IncludedTabEdgeAccount = () => {
   return (
-    <div className=" py-12 px-6">
-      <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8">
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
-          Included TabEdge Account
-        </h2>
-        <ul className="space-y-4">
+    <div className="bg-white">
+      <div className="container mx-auto   rounded-2xl lg:py-24">
+        <SectionHeading title="Included TabEdge Account" />
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {includedFeatures.map(({ id, icon: Icon, text }) => (
             <li
               key={id}
-              className="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
+              className="flex items-center bg-gray-50 p-4 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer shadow-sm hover:shadow-md"
             >
               <div className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-lg">
                 <Icon size={20} />
