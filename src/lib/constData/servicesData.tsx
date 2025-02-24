@@ -5,7 +5,8 @@ const servicesData = [
     description:
       "Take control of your finances and enjoy all the benefits of banking in the U.S. without needing to be a U.S. resident or citizen. Open a TabEdge Infinite account and enjoy virtual and physical Visa Infinite debit cards*. Make instant purchases online, in-store, or with a tap of your phone.",
     imageSrc: "/services/personal-bank.png",
-    buttonText: "Register for Personal Banking",
+    buttonText: "Deatils about Personal Banking",
+    slug: "personal-banking",
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const servicesData = [
     description:
       "Reduce costs and protect your profits with USD stability. Our business banking accounts are designed for small or single-director businesses that need an international edge. Enjoy the benefits of U.S. banking without needing to be a U.S. registered company, citizen, or resident.",
     imageSrc: "/services/business-bank.png",
-    buttonText: "Register for Business Banking",
+    buttonText: "Details about Business Banking",
+    slug: "business-banking",
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ const servicesData = [
     description:
       "Manage corporate finances with ease while enjoying all the benefits of banking in the U.S. without needing to be a U.S. resident or citizen. Open a TabEdge Infinite account and enjoy virtual and physical Visa Infinite debit cards*. Make instant purchases online, in-store, or with a tap of your phone.",
     imageSrc: "/services/corporate-bank.png",
-    buttonText: "Register for Corporate Banking",
+    buttonText: "Details about Corporate Banking",
+    slug: "corporate-banking",
   },
 ];
 

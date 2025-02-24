@@ -9,7 +9,7 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <div >
+    <>
       <HeroBanner />
       <Services />
       <BankControl />
@@ -17,7 +17,7 @@ const HomePage = () => {
       <IncludedTabEdgeAccount />
       <FAQ />
       <ContactUs />
-    </div>
+    </>
   );
 };
 

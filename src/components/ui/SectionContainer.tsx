@@ -6,7 +6,11 @@ type TailwindClassProps = ChildrenType & {
 };
 
 const SectionContainer = ({ children, tailwindClass }: TailwindClassProps) => {
-  return <div className={`py-8 lg:py-24 ${tailwindClass}`}>{children}</div>;
+  return (
+    <div className={`py-8 lg:py-14 xl:py-16 2xl:py-24 ${tailwindClass}`}>
+      {children}
+    </div>
+  );
 };
 
 export default SectionContainer;

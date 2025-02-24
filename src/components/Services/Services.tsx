@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import SectionContainer from "../ui/SectionContainer";
 import servicesData from "@/lib/constData/servicesData";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -11,7 +12,7 @@ const Services = () => {
       <SectionHeading title="Our Services" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {servicesData.map(
-          ({ id, title, description, imageSrc, buttonText }) => (
+          ({ id, title, description, imageSrc, buttonText,slug }) => (
             <div
               key={id}
               className="bg-white p-6 space-y-4 shadow-lg rounded-lg flex flex-col justify-evenly"
@@ -23,9 +24,9 @@ const Services = () => {
                 alt={title}
                 className="mx-auto"
               />
-              <h1 className="text-3xl font-bold text-center">{title}</h1>
+              <h1 className="text-2xl font-bold text-center">{title}</h1>
               <p className="text-justify">{description}</p>
-              <Button className="mx-auto block">{buttonText}</Button>
+             <Link href={slug}> <Button>{buttonText}</Button></Link>
             </div>
           )
         )}

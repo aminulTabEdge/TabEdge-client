@@ -13,11 +13,11 @@ const SectionHeading = ({
 }: SectionHeadingType) => {
   return (
     <div
-      className={`max-w-xl mx-auto text-center pb-6 lg:pb-8 xl:pb-12 ${
+      className={`max-w-xl mx-auto text-center pb-6 lg:pb-12 xl:pb-16 ${
         tailwindClass || ""
       }`}
     >
-      <h1 className="font-bold text-3xl lg:text-4xl">{title}</h1>
+      <h1 className="font-bold text-3xl  2xl:text-4xl ">{title}</h1>
       {description && <p>{description}</p>}
     </div>
   );

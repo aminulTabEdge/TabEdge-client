@@ -2,13 +2,14 @@ import React from "react";
 import SectionHeading from "../ui/SectionHeading";
 import Image from "next/image";
 import tabEdgeBank from "@/lib/constData/tabEdgeBank";
+import SectionContainer from "../ui/SectionContainer";
 
 const BankControl = () => {
   return (
-    <div className=" lg:py-24  rounded-lg bg-gradient-to-r from-blue-50 to-blue-100 ">
+    <SectionContainer tailwindClass="bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container mx-auto ">
         <SectionHeading title="TabEdge Bank" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {tabEdgeBank.map((service) => (
             <div
               key={service.id}
@@ -32,7 +33,7 @@ const BankControl = () => {
           ))}
         </div>
       </div>
-    </div>
+    </SectionContainer>
   );
 };
 
