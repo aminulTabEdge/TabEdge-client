@@ -1,4 +1,8 @@
+import BankControl from "@/components/BankControl/BankControl";
+import ContactUs from "@/components/ContactUs/ContactUs";
+import FAQ from "@/components/FAQ/FAQ";
 import HeroBanner from "@/components/Home/HeroBanner";
+import IncludedTabEdgeAccount from "@/components/IncludedTabEdgeAccount/IncludedTabEdgeAccount";
 import Services from "@/components/Services/Services";
 import WhyTabEdge from "@/components/WhyTabEdge/WhyTabEdge";
 import React from "react";
@@ -8,7 +12,11 @@ const HomePage = () => {
     <div className="space-y-8">
       <HeroBanner />
       <Services />
+      <BankControl />
       <WhyTabEdge />
+      <IncludedTabEdgeAccount />
+      <FAQ />
+      <ContactUs />
     </div>
   );
 };
