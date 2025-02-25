@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { BsSendFill } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 // Define the form input types
 interface IFormInput {
@@ -21,6 +22,7 @@ const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<IFormInput>();
 
@@ -32,7 +34,12 @@ const ContactForm: React.FC = () => {
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       console.log("Form Data Submitted: ", data);
-      alert("Message sent successfully!");
+      await reset();
+      Swal.fire({
+        title: "Good job!",
+        text: "Message Sent Successfully!",
+        icon: "success",
+      });
     } catch (error) {
       console.error("Error submitting form", error);
     } finally {
@@ -78,7 +85,9 @@ const ContactForm: React.FC = () => {
               className="mt-2"
             />
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
@@ -92,7 +101,9 @@ const ContactForm: React.FC = () => {
               className="mt-2 h-32"
             />
             {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.message.message}
+              </p>
             )}
           </div>
 
