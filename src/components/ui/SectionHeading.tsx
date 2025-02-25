@@ -17,7 +17,7 @@ const SectionHeading = ({
         tailwindClass || ""
       }`}
     >
-      <h1 className="font-bold text-3xl  2xl:text-4xl ">{title}</h1>
+      <h1 className="font-bold text-3xl mb-4  2xl:text-4xl ">{title}</h1>
       {description && <p>{description}</p>}
     </div>
   );

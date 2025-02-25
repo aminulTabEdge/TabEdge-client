@@ -1,279 +1,118 @@
 "use client";
-import React, { useState } from "react";
 
-// react icons
-import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
-import { FaDiscord } from "react-icons/fa";
-import { TbBrandGithubFilled } from "react-icons/tb";
+import React, { useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
-import { MdDashboardCustomize, MdKeyboardArrowDown } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
-import { CgIfDesign } from "react-icons/cg";
-import { FaCubesStacked } from "react-icons/fa6";
+import Link from "next/link";
+import Image from "next/image";
 
 const ResponsiveNavbar = () => {
-  const [mobileAboutUsOpen, setMobileAboutUsOpen] = useState(false);
-  const [mobileServiceOpen, setMobileServiceOpen] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [mobileBankingOpen, setMobileBankingOpen] = useState(false);
+  const [desktopBankingOpen, setDesktopBankingOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between w-full relative h-auto">
-      {/* logo */}
-      <img
-        src="https://i.ibb.co/0BZfPq6/darklogo.png"
-        alt="logo"
-        className="w-[60px] "
-      />
+    <nav className="flex items-center justify-between w-full  fixed top-0 left-0 z-50 bg-white shadow-md  md:sticky md:top-0">
+      {/* Logo */}
+      <div className="text-center">
+        <Link href={"/"}>
+          <Image
+            src={"/logo.webp"}
+            width={180}
+            height={40}
+            alt="TabEdge Logo"
+          />
+        </Link>
+      </div>
 
-      {/* nav links */}
-      <ul className="items-center gap-[20px] text-[1rem] text-[#424242] md:flex hidden">
-        <li className="transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize">
-          home
+      {/* Desktop Navigation */}
+      <ul className="hidden md:flex items-center gap-6 text-gray-700 text-lg">
+        <li className="hover:text-blue-500 transition cursor-pointer">
+          <Link href={"/"}>Home</Link>
         </li>
-
-        {/* about us mega menu */}
-        <li className=" transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize flex items-center gap-[3px] group relative">
-          about us
-          <MdKeyboardArrowDown className="text-[1.5rem] text-[#424242] group-hover:text-[#3B9DF8] transition-all duration-500 group-hover:rotate-[180deg]" />
-          <article className="p-6 bg-white rounded-md boxShadow w-[500px] absolute top-[40px] z-[-1] left-[-100px] group-hover:translate-y-0 translate-y-[-20px] group-hover:opacity-100 opacity-0 group-hover:z-30 transition-all duration-300">
-            <div className="grid grid-cols-2">
-              <ul className="flex flex-col gap-[7px] text-[#424242]">
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
-                  Company Details
+        <li
+          className="relative flex items-center gap-1 cursor-pointer hover:text-blue-500"
+          onMouseEnter={() => setDesktopBankingOpen(true)}
+          onMouseLeave={() => setDesktopBankingOpen(false)}
+        >
+          Banking <MdKeyboardArrowDown className="transition" />
+          {desktopBankingOpen && (
+            <div className="absolute top-full text-center bg-white shadow-lg rounded-md p-7  w-64">
+              <ul className="space-y-2 text-gray-700">
+                <li className="hover:text-blue-500 transition">
+                  <Link href="/personal-banking">Personal Banking</Link>
                 </li>
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                  Company Location
+                <li className="hover:text-blue-500 transition">
+                  <Link href="/business-banking">Business Banking</Link>
                 </li>
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                  Team Members
-                </li>
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
-                  Office Tour
+                <li className="hover:text-blue-500 transition">
+                  <Link href="/corporate-banking">Corporate Banking</Link>
                 </li>
               </ul>
-
-              <div className="flex flex-col gap-[10px] border-l border-[#e5eaf2] pl-[30px]">
-                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                  <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
-                  Full Customize
-                </div>
-
-                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                  <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
-                  Modern Design
-                </div>
-
-                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                  <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
-                  Well Stacktured
-                </div>
-              </div>
             </div>
-
-            <img
-              src="https://i.ibb.co/YRgsrsh/AD22-04.png"
-              alt="image"
-              className="w-full object-cover mt-4 rounded-sm h-[150px]"
-            />
-          </article>
+          )}
         </li>
-
-        {/* service mega menu */}
-        <li className="transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize group relative flex items-center gap-[3px]">
-          services
-          <MdKeyboardArrowDown className="text-[1.5rem] text-[#424242] group-hover:text-[#3B9DF8] transition-all duration-500 group-hover:rotate-[180deg]" />
-          <article className="p-6 bg-white rounded-md w-[500px] absolute top-[40px] z-[-1] left-[-150px] group-hover:translate-y-0 translate-y-[-20px] group-hover:opacity-100 opacity-0 group-hover:z-30 transition-all duration-300">
-            <div className="grid grid-cols-2">
-              <ul className="flex flex-col gap-[7px] text-[#424242]">
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
-                  Company Details
-                </li>
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                  Company Location
-                </li>
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                  Team Members
-                </li>
-                <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                  <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
-                  Office Tour
-                </li>
-              </ul>
-
-              <div className="flex flex-col gap-[10px] border-l border-[#e5eaf2] pl-[30px]">
-                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                  <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
-                  Full Customize
-                </div>
-
-                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                  <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
-                  Modern Design
-                </div>
-
-                <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                  <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
-                  Well Stacktured
-                </div>
-              </div>
-            </div>
-
-            <img
-              src="https://i.ibb.co/XJJ4mNY/AD21-03.png"
-              alt="image"
-              className="w-full object-cover mt-4 rounded-sm h-[150px]"
-            />
-          </article>
+        <li className="hover:text-blue-500 transition cursor-pointer">
+          <Link href={"/contact"}> Contact</Link>
         </li>
       </ul>
 
-      <div className="flex items-center gap-[10px]">
-        <div className="relative md:flex hidden">
-          <input
-            className="py-1.5 pr-4 border border-[#424242] pl-10 rounded-full outline-none focus:border-[#3B9DF8]"
-            placeholder="Search..."
-          />
-          <IoIosSearch className="absolute top-[9px] left-3 text-[#424242] text-[1.3rem]" />
-        </div>
+      {/* Account Button */}
+      <button className="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-md">
+        Account
+      </button>
 
-        <FaDiscord className="text-[1.6rem] text-[#424242] cursor-pointer hover:text-[#3B9DF8] transition-all duration-500 " />
-        <TbBrandGithubFilled className="text-[1.6rem] text-[#424242] cursor-pointer hover:text-[#3B9DF8] transition-all duration-500" />
+      {/* Mobile Menu Toggle */}
+      <CiMenuFries
+        className="text-2xl text-gray-700 cursor-pointer md:hidden"
+        onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+      />
 
-        <CiMenuFries
-          className="text-[1.6rem] text-[#424242]c cursor-pointer md:hidden flex"
-          onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
-        />
-      </div>
-
-      {/* mobile sidebar */}
+      {/* Mobile Sidebar */}
       <aside
-        className={` ${
-          mobileSidebarOpen
-            ? "translate-x-0 opacity-100 z-20"
-            : "translate-x-[200px] opacity-0 z-[-1]"
-        } md:hidden bg-white boxShadow p-4 text-center absolute top-[55px] right-0 sm:w-[300px] w-full rounded-md transition-all duration-300`}
+        className={`fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 ${
+          mobileSidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        <ul className="items-start gap-[20px] text-[1rem] text-gray-600 flex flex-col">
-          <li className="hover:text-[#3B9DF8] group transition-all duration-500 cursor-pointer capitalize flex items-center gap-[10px]">
+        <button
+          className="absolute top-4 right-4 text-gray-700 text-xl"
+          onClick={() => setMobileSidebarOpen(false)}
+        >
+          &times;
+        </button>
+        <ul className="mt-10 space-y-4 text-gray-700">
+          <li className="hover:text-blue-500 transition cursor-pointer">
             Home
           </li>
-
           <li
-            onClick={() => setMobileAboutUsOpen(!mobileAboutUsOpen)}
-            className="hover:text-[#3B9DF8] group transition-all duration-500 cursor-pointer capitalize flex items-center gap-[10px]"
+            className="hover:text-blue-500 transition cursor-pointer flex items-center gap-2"
+            onClick={() => setMobileBankingOpen(!mobileBankingOpen)}
           >
-            About Us
+            Banking{" "}
             <IoIosArrowDown
-              className={`${
-                mobileAboutUsOpen ? "rotate-[180deg]" : "rotate-0"
-              } text-gray-600 group-hover:text-[#3B9DF8] transition-all duration-300`}
+              className={`transition ${
+                mobileBankingOpen ? "rotate-180" : "rotate-0"
+              }`}
             />
           </li>
-
-          {/* about us mega menu */}
-          <div
-            className={`${
-              mobileAboutUsOpen ? "block" : "hidden"
-            } group font-[500] ml-6`}
-          >
-            <ul className="flex flex-col gap-[7px] text-[#424242]">
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
-                Company Details
+          {mobileBankingOpen && (
+            <ul className="pl-6 space-y-2">
+              <li className="hover:text-blue-500 transition">
+                <Link href="/banking">Personal</Link>
               </li>
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                Company Location
+              <li className="hover:text-blue-500 transition flex items-center gap-2">
+                <BsArrowRight /> Business
               </li>
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                Team Members
-              </li>
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" /> Office
-                Tour
+              <li className="hover:text-blue-500 transition flex items-center gap-2">
+                <BsArrowRight /> Corporate
               </li>
             </ul>
-
-            <div className="flex flex-col gap-[10px] mt-4">
-              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
-                Full Customize
-              </div>
-
-              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
-                Modern Design
-              </div>
-
-              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
-                Well Stacktured
-              </div>
-            </div>
-          </div>
-
-          <li
-            onClick={() => setMobileServiceOpen(!mobileServiceOpen)}
-            className="hover:text-[#3B9DF8] group transition-all duration-500 cursor-pointer capitalize flex items-center gap-[10px]"
-          >
-            Service
-            <IoIosArrowDown
-              className={`${
-                mobileServiceOpen ? "rotate-0" : "rotate-[180deg]"
-              } text-gray-600 group-hover:text-[#3B9DF8] transition-all duration-300`}
-            />
+          )}
+          <li className="hover:text-blue-500 transition cursor-pointer">
+            Contact
           </li>
-
-          {/* service mega menu */}
-          <div
-            className={`${
-              mobileServiceOpen ? "hidden" : "block"
-            } font-[500] ml-6`}
-          >
-            <ul className="flex flex-col gap-[7px] text-[#424242]">
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" />{" "}
-                Company Details
-              </li>
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                Company Location
-              </li>
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" />
-                Team Members
-              </li>
-              <li className="flex items-center gap-[7px] hover:text-[#3B9DF8] transition-all duration-300">
-                <BsArrowRight className="text-[#424242] text-[0.9rem]" /> Office
-                Tour
-              </li>
-            </ul>
-
-            <div className="flex flex-col gap-[10px] mt-4">
-              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                <MdDashboardCustomize className="bg-blue-200 text-blue-900 p-1.5 rounded-full text-[2rem]" />
-                Full Customize
-              </div>
-
-              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                <CgIfDesign className="bg-orange-200 text-orange-800 p-1.5 rounded-full text-[2rem]" />
-                Modern Design
-              </div>
-
-              <div className="flex items-center gap-[10px] text-[1rem] text-[#424242]">
-                <FaCubesStacked className="bg-yellow-200 text-yellow-800 p-1.5 rounded-full text-[2rem]" />
-                Well Stacktured
-              </div>
-            </div>
-          </div>
         </ul>
       </aside>
     </nav>
