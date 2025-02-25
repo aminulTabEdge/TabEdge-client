@@ -3,13 +3,20 @@ import React from "react";
 
 type TailwindClassProps = ChildrenType & {
   tailwindClass?: string;
+  backgroundColor?: string;
 };
 
-const SectionContainer = ({ children, tailwindClass }: TailwindClassProps) => {
+const SectionContainer = ({
+  children,
+  tailwindClass,
+  backgroundColor,
+}: TailwindClassProps) => {
   return (
-    <div className={`py-8 lg:py-14 xl:py-16 2xl:py-24 ${tailwindClass}`}>
-      {children}
-    </div>
+    <section className={backgroundColor}>
+      <div className={`py-8 lg:py-14 xl:py-16 2xl:py-24 px-2 ${tailwindClass}`}>
+        {children}
+      </div>
+    </section>
   );
 };
 

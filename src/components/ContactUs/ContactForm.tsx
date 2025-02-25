@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,6 +15,8 @@ interface IFormInput {
 }
 
 const ContactForm: React.FC = () => {
+  const [loading, setLoading] = useState(false);
+
   // Set up the React Hook Form
   const {
     register,
@@ -23,16 +25,29 @@ const ContactForm: React.FC = () => {
   } = useForm<IFormInput>();
 
   // Handle form submission
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    // Your form submission logic here
-    console.log("Form Data Submitted: ", data);
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    setLoading(true);
+    try {
+      // Simulating an API call
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      console.log("Form Data Submitted: ", data);
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error("Error submitting form", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="max-w-lg w-full mx-auto p-4 rounded-lg  lg:w-2/3 ">
-      <h2 className="text-2xl font-bold text-center mb-6">Contact Us</h2>
+    <div className="max-w-lg w-full mx-auto  sm:p-6 lg:p-8">
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+        Contact Us
+      </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid gap-4">
+        <div className="grid gap-5">
+          {/* Name Input */}
           <div>
             <Label htmlFor="name">Full Name</Label>
             <Input
@@ -42,10 +57,11 @@ const ContactForm: React.FC = () => {
               className="mt-2"
             />
             {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
+              <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
             )}
           </div>
 
+          {/* Email Input */}
           <div>
             <Label htmlFor="email">Email Address</Label>
             <Input
@@ -62,10 +78,11 @@ const ContactForm: React.FC = () => {
               className="mt-2"
             />
             {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
+              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
             )}
           </div>
 
+          {/* Message Input */}
           <div>
             <Label htmlFor="message">Message</Label>
             <Textarea
@@ -75,12 +92,17 @@ const ContactForm: React.FC = () => {
               className="mt-2 h-32"
             />
             {errors.message && (
-              <p className="text-red-500 text-sm">{errors.message.message}</p>
+              <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
             )}
           </div>
 
-          <Button type="submit" className="mt-4 w-full">
-            Submit <BsSendFill />
+          {/* Submit Button */}
+          <Button
+            type="submit"
+            className="mt-4 w-full flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 transition-all"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Submit"} <BsSendFill />
           </Button>
         </div>
       </form>

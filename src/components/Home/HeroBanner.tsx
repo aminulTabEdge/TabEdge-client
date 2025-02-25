@@ -4,27 +4,27 @@ import { Button } from "../ui/button";
 
 const HeroBanner = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-[500px] md:h-[650px] lg:h-[800px]">
       {/* Background Image */}
       <Image
-        src={"/home/hero-banner.png"}
-        width={1920}
-        height={800}
+        src="/home/hero-banner.png"
         alt="Tabedge Hero banner"
-        className="w-full h-auto object-cover"
+        fill
+        priority
+        className="object-cover"
       />
 
-      {/* Overlay (Optional: Improves text visibility) */}
-      <div className="absolute inset-0 "></div>
+      {/* Overlay (Optional for text visibility) */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Text Content */}
-      <div className="absolute top-1/2 left-10 transform -translate-y-1/2 text-white space-y-4">
-        <h1 className="text-4xl font-bold mb-4">Welcome to TabEdge</h1>
-        <p className="text-lg max-w-md">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4">
+        <h1 className="text-2xl md:text-4xl font-bold">Welcome to TabEdge</h1>
+        <p className="text-sm md:text-lg max-w-md mx-auto mt-2">
           Your trusted partner for innovative digital solutions. Elevate your
           brand with us.
         </p>
-        <Button>Get Started</Button>
+        <Button className="mt-4 md:mt-6">Get Started</Button>
       </div>
     </div>
   );

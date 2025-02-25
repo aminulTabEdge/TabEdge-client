@@ -10,18 +10,18 @@ const contactDetails = [
 
 const ContactInfo: React.FC = () => {
   return (
-    <div className=" py-12 px-6 ">
-      <div className="max-w-3xl mx-auto   rounded-2xl p-8">
+    <div className="py-12 px-4 sm:px-8 lg:px-12">
+      <div className="max-w-3xl mx-auto  p-8">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
           Contact Information
         </h2>
-        <ul className="space-y-2">
+        <ul className="space-y-4 flex flex-col items-center">
           {contactDetails.map(({ id, icon: Icon, text }) => (
-            <li key={id} className="flex items-center">
-              <div className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white ">
-                <Icon size={20} />
+            <li key={id} className="flex items-center w-full max-w-sm">
+              <div className="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-md">
+                <Icon size={24} />
               </div>
-              <span className="ml-4  font-medium">{text}</span>
+              <span className="ml-4 text-gray-700 font-medium">{text}</span>
             </li>
           ))}
         </ul>
