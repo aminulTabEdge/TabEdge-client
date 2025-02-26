@@ -13,7 +13,9 @@ const SectionContainer = ({
 }: TailwindClassProps) => {
   return (
     <section className={backgroundColor}>
-      <div className={`py-8 lg:py-14 xl:py-16 2xl:py-24 px-2 ${tailwindClass}`}>
+      <div
+        className={`py-8 lg:py-14 xl:py-16 2xl:py-24 px-2 ${tailwindClass}`}
+      >
         {children}
       </div>
     </section>

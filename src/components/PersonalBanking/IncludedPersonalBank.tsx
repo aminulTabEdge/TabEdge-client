@@ -1,7 +1,7 @@
 import React from "react";
 import SectionContainer from "../ui/SectionContainer";
 import SectionHeading from "../ui/SectionHeading";
-import { HiCheckCircle } from "react-icons/hi";
+import IncludedCard from "../shared/IncludedCard";
 
 const features = [
   "USD personal current account",
@@ -21,13 +21,7 @@ const IncludedPersonalBank = () => {
         <SectionHeading title="What is included?" />
         <div className="max-w-2xl mx-auto my-10 space-y-4">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between border-b border-teal-400 pb-2"
-            >
-              <span className="text-gray-800 text-lg">{feature}</span>
-              <HiCheckCircle className="text-teal-500 text-2xl" />
-            </div>
+            <IncludedCard key={index} feature={feature} />
           ))}
         </div>
       </>

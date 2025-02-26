@@ -1,4 +1,8 @@
 import SectionBanner from "@/components/Banner/SectionBanner";
+import AboutBussinessBanking from "@/components/BusinessBanking/AboutBussinessBanking";
+import BussinessBankControl from "@/components/BusinessBanking/BusinessBankControl";
+import Documents from "@/components/BusinessBanking/Documents";
+import IncluedBusinessBanking from "@/components/BusinessBanking/IncluedBusinessBanking";
 import React from "react";
 
 const BussinessBanking = () => {
@@ -10,6 +14,10 @@ const BussinessBanking = () => {
         tailwindClass="text-white "
         backgroundImagePath="/background/blue-gradiant.png"
       />
+      <BussinessBankControl />
+      <AboutBussinessBanking />
+      <IncluedBusinessBanking />
+      <Documents />
     </div>
   );
 };

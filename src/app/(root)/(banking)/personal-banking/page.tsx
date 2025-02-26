@@ -1,8 +1,8 @@
 import BankControl from "@/components/BankControl/BankControl";
 import SectionBanner from "@/components/Banner/SectionBanner";
-import IncludedPersonalBank from "@/components/PersonalBank/IncludedPersonalBank";
-import OnlineBanking from "@/components/PersonalBank/OnlineBanking";
-import PurchasingPower from "@/components/PersonalBank/PurchasingPower";
+import IncludedPersonalBank from "@/components/PersonalBanking/IncludedPersonalBank";
+import OnlineBanking from "@/components/PersonalBanking/OnlineBanking";
+import PurchasingPower from "@/components/PersonalBanking/PurchasingPower";
 import React from "react";
 
 const PersonalBanking = () => {
