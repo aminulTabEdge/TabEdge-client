@@ -14,15 +14,16 @@ const ResponsiveNavbar = () => {
   const [desktopBankingOpen, setDesktopBankingOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between w-full  fixed top-0 left-0 z-50 bg-white shadow-md  md:sticky md:top-0">
+    <nav className="flex items-center justify-between w-full sticky top-0 left-0 z-50 bg-white shadow-md px-4 md:px-8 ">
       {/* Logo */}
-      <div className="text-center">
-        <Link href={"/"}>
+      <div className="relative w-[140px] h-[40px] md:w-[180px] md:h-[50px] ">
+        <Link href="/">
           <Image
-            src={"/logo.webp"}
-            width={180}
-            height={40}
+            src="/logo.webp"
             alt="TabEdge Logo"
+            fill
+            className="object-contain"
+            priority
           />
         </Link>
       </div>
@@ -30,7 +31,7 @@ const ResponsiveNavbar = () => {
       {/* Desktop Navigation */}
       <ul className="hidden md:flex items-center gap-6 text-gray-700 text-lg">
         <li className="hover:text-blue-500 transition cursor-pointer">
-          <Link href={"/"}>Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li
           className="relative flex items-center gap-1 cursor-pointer hover:text-blue-500"
@@ -39,7 +40,7 @@ const ResponsiveNavbar = () => {
         >
           Banking <MdKeyboardArrowDown className="transition" />
           {desktopBankingOpen && (
-            <div className="absolute top-full text-center bg-white shadow-lg rounded-md p-7  w-64">
+            <div className="absolute top-full text-center bg-white shadow-lg rounded-md p-5 w-56">
               <ul className="space-y-2 text-gray-700">
                 <li className="hover:text-blue-500 transition">
                   <Link href="/personal-banking">Personal Banking</Link>
@@ -55,7 +56,7 @@ const ResponsiveNavbar = () => {
           )}
         </li>
         <li className="hover:text-blue-500 transition cursor-pointer">
-          <Link href={"/contact"}> Contact</Link>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
 
@@ -77,14 +78,14 @@ const ResponsiveNavbar = () => {
         }`}
       >
         <button
-          className="absolute top-4 right-4 text-gray-700 text-xl"
+          className="absolute top-4 right-4 text-gray-700 text-2xl"
           onClick={() => setMobileSidebarOpen(false)}
         >
           &times;
         </button>
         <ul className="mt-10 space-y-4 text-gray-700">
           <li className="hover:text-blue-500 transition cursor-pointer">
-            Home
+            <Link href="/">Home</Link>
           </li>
           <li
             className="hover:text-blue-500 transition cursor-pointer flex items-center gap-2"
@@ -111,7 +112,7 @@ const ResponsiveNavbar = () => {
             </ul>
           )}
           <li className="hover:text-blue-500 transition cursor-pointer">
-            Contact
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </aside>
