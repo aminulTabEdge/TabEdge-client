@@ -1,12 +1,15 @@
+import { FaUserTie, FaBriefcase, FaBuilding } from "react-icons/fa";
+
 const servicesData = [
   {
     id: 1,
     title: "Personal Banking",
     description:
-      "Take control of your finances and enjoy all the benefits of banking in the U.S. without needing to be a U.S. resident or citizen. Open a TabEdge Infinite account and enjoy virtual and physical Visa Infinite debit cards*. Make instant purchases online, in-store, or with a tap of your phone.",
+      "Take control of your finances and enjoy all the benefits of banking in the U.S. without needing to be a U.S. resident or citizen. Open a TabEdge Infinite account and enjoy virtual and physical Visa Infinite debit cards. Make instant purchases online, in-store, or with a tap of your phone.",
     imageSrc: "/services/personal-bank.png",
-    buttonText: "Deatils about Personal Banking",
+    buttonText: "Details about Personal Banking",
     slug: "personal-banking",
+    icon: <FaUserTie className="text-blue-500 text-3xl" />,
   },
   {
     id: 2,
@@ -16,6 +19,7 @@ const servicesData = [
     imageSrc: "/services/business-bank.png",
     buttonText: "Details about Business Banking",
     slug: "business-banking",
+    icon: <FaBriefcase className="text-green-500 text-3xl" />,
   },
   {
     id: 3,
@@ -25,6 +29,7 @@ const servicesData = [
     imageSrc: "/services/corporate-bank.png",
     buttonText: "Details about Corporate Banking",
     slug: "corporate-banking",
+    icon: <FaBuilding className="text-purple-500 text-3xl" />,
   },
 ];
 

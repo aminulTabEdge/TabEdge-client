@@ -13,9 +13,9 @@ import SectionContainer from "../ui/SectionContainer";
 
 const includedFeatures = [
   { id: 1, icon: FaDollarSign, text: "USD Personal Current Account" },
-  { id: 2, icon: FaCreditCard, text: "Your TabEdge Visa Debit Card*" },
+  { id: 2, icon: FaCreditCard, text: "Your TabEdge Visa Debit Card" },
   { id: 3, icon: FaExchangeAlt, text: "Institutional FX Rates" },
-  { id: 4, icon: FaMoneyCheckAlt, text: "No Account Funding Charges**" },
+  { id: 4, icon: FaMoneyCheckAlt, text: "No Account Funding Charges" },
   { id: 5, icon: FaFileInvoice, text: "Limitless ACH & Wire Transfers" },
   { id: 6, icon: FaFileInvoice, text: "Digital Statements & Payment Receipts" },
   { id: 7, icon: FaShieldAlt, text: "Extended Warranty & Purchase Protection" },
@@ -24,7 +24,7 @@ const includedFeatures = [
 
 const IncludedTabEdgeAccount = () => {
   return (
-    <SectionContainer >
+    <SectionContainer>
       <div className="container mx-auto">
         <SectionHeading title="Included TabEdge Account" />
 
