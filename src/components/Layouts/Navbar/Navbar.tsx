@@ -16,7 +16,7 @@ const ResponsiveNavbar = () => {
   return (
     <nav className="flex items-center justify-between w-full sticky top-0 left-0 z-50 bg-white shadow-md px-4 md:px-8 ">
       {/* Logo */}
-      <div className="relative w-[140px] h-[40px] md:w-[180px] md:h-[50px] ">
+      <div className="relative w-[140px] h-[40px] md:w-[200px] md:h-[70px] ">
         <Link href="/">
           <Image
             src="/logo.webp"

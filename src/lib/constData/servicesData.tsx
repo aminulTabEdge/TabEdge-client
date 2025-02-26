@@ -9,7 +9,7 @@ const servicesData = [
     imageSrc: "/services/personal-bank.png",
     buttonText: "Details about Personal Banking",
     slug: "personal-banking",
-    icon: <FaUserTie className="text-blue-500 text-3xl" />,
+    icon: <FaUserTie style={{ color: "#E63946", fontSize: "1.875rem" }} />, // Red shade
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const servicesData = [
     imageSrc: "/services/business-bank.png",
     buttonText: "Details about Business Banking",
     slug: "business-banking",
-    icon: <FaBriefcase className="text-green-500 text-3xl" />,
+    icon: <FaBriefcase style={{ color: "#F4A261", fontSize: "1.875rem" }} />, // Orange shade
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const servicesData = [
     imageSrc: "/services/corporate-bank.png",
     buttonText: "Details about Corporate Banking",
     slug: "corporate-banking",
-    icon: <FaBuilding className="text-purple-500 text-3xl" />,
+    icon: <FaBuilding style={{ color: "#457B9D", fontSize: "1.875rem" }} />, // Blue shade
   },
 ];
 

@@ -1,26 +1,8 @@
 import React from "react";
-import {
-  FaDollarSign,
-  FaCreditCard,
-  FaExchangeAlt,
-  FaMoneyCheckAlt,
-  FaFileInvoice,
-  FaShieldAlt,
-  FaCar,
-} from "react-icons/fa";
+
 import SectionHeading from "../ui/SectionHeading";
 import SectionContainer from "../ui/SectionContainer";
-
-const includedFeatures = [
-  { id: 1, icon: FaDollarSign, text: "USD Personal Current Account" },
-  { id: 2, icon: FaCreditCard, text: "Your TabEdge Visa Debit Card" },
-  { id: 3, icon: FaExchangeAlt, text: "Institutional FX Rates" },
-  { id: 4, icon: FaMoneyCheckAlt, text: "No Account Funding Charges" },
-  { id: 5, icon: FaFileInvoice, text: "Limitless ACH & Wire Transfers" },
-  { id: 6, icon: FaFileInvoice, text: "Digital Statements & Payment Receipts" },
-  { id: 7, icon: FaShieldAlt, text: "Extended Warranty & Purchase Protection" },
-  { id: 8, icon: FaCar, text: "Auto Rental & Travel Accident Insurance" },
-];
+import includedFeatures from "@/lib/constData/includedFeatures";
 
 const IncludedTabEdgeAccount = () => {
   return (
@@ -29,17 +11,17 @@ const IncludedTabEdgeAccount = () => {
         <SectionHeading title="Included TabEdge Account" />
 
         <ul className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {includedFeatures.map(({ id, icon: Icon, text }) => (
+          {includedFeatures.map(({ id, icon: Icon, text, color }) => (
             <li
               key={id}
               className="flex items-center bg-gray-50 p-5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-lg cursor-pointer"
             >
-              {/* Icon container */}
-              <div className=" bg-blue-500/90 p-2 text-white rounded-full">
-                <Icon
-                  size={26}
-                  className="sm:text-xl md:text-2xl lg:text-3xl"
-                />
+              {/* Icon container with dynamic background color */}
+              <div
+                style={{ backgroundColor: color }}
+                className="p-2 text-white rounded-full"
+              >
+                <Icon size={26} />
               </div>
 
               {/* Text */}
