@@ -6,7 +6,7 @@ const BussinessBanking = () => {
     <div>
       <SectionBanner
         heading="Business Banking"
-        description="Take control of your finances with a personal bank account from TabEdge Bank"
+        description="Open a U.S. business bank online. No need to be a U.S. registered company, citizen or residen"
         tailwindClass="text-white "
         backgroundImagePath="/background/blue-gradiant.png"
       />
