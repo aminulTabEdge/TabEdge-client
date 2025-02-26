@@ -8,7 +8,7 @@ import React from "react";
 const BussinessBanking = () => {
   return (
     <div>
-      <SectionBanner
+      <SectionBanner 
         heading="Business Banking"
         description="Open a U.S. business bank online. No need to be a U.S. registered company, citizen or residen"
         tailwindClass="text-white "

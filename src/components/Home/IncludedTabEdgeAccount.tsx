@@ -24,7 +24,7 @@ const includedFeatures = [
 
 const IncludedTabEdgeAccount = () => {
   return (
-    <SectionContainer backgroundColor="bg-white">
+    <SectionContainer >
       <div className="container mx-auto">
         <SectionHeading title="Included TabEdge Account" />
 
@@ -34,9 +34,15 @@ const IncludedTabEdgeAccount = () => {
               key={id}
               className="flex items-center bg-gray-50 p-5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-lg cursor-pointer"
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-500/90 text-white rounded-lg hover:bg-blue-600">
-                <Icon size={24} />
+              {/* Icon container */}
+              <div className=" bg-blue-500/90 p-2 text-white rounded-full">
+                <Icon
+                  size={26}
+                  className="sm:text-xl md:text-2xl lg:text-3xl"
+                />
               </div>
+
+              {/* Text */}
               <span className="ml-4 text-gray-700 md:text-gray-800 text-lg md:text-xl font-medium">
                 {text}
               </span>

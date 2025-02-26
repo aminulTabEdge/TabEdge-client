@@ -8,7 +8,7 @@ const contactDetails = [
   { id: 4, icon: FaClock, text: "Mon - Fri: 9:00 AM - 6:00 PM" },
 ];
 
-const ContactInfo: React.FC = () => {
+const ContactInfo = () => {
   return (
     <div className="py-12 px-4 sm:px-8 lg:px-12">
       <div className="max-w-3xl mx-auto  p-8">
@@ -18,8 +18,8 @@ const ContactInfo: React.FC = () => {
         <ul className="space-y-4 flex flex-col items-center">
           {contactDetails.map(({ id, icon: Icon, text }) => (
             <li key={id} className="flex items-center w-full max-w-sm">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-md">
-                <Icon size={24} />
+              <div className=" bg-blue-500/90 p-2 text-white rounded-full">
+                <Icon size={26} className=" md:text-2xl lg:text-3xl" />
               </div>
               <span className="ml-4 text-gray-700 font-medium">{text}</span>
             </li>
