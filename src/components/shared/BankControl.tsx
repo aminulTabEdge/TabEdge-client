@@ -2,7 +2,7 @@ import React from "react";
 import SectionHeading from "../ui/SectionHeading";
 import tabEdgeBank from "@/lib/constData/tabEdgeBank";
 import SectionContainer from "../ui/SectionContainer";
-import BankControlCard from "../shared/BankConreolCard";
+import BankControlCard from "./BankConreolCard";
 
 const BankControl = () => {
   return (

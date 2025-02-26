@@ -1,4 +1,4 @@
-import BankControl from "@/components/BankControl/BankControl";
+import BankControl from "@/components/shared/BankControl";
 import SectionBanner from "@/components/Banner/SectionBanner";
 import IncludedPersonalBank from "@/components/PersonalBanking/IncludedPersonalBank";
 import OnlineBanking from "@/components/PersonalBanking/OnlineBanking";
@@ -16,9 +16,8 @@ const PersonalBanking = () => {
       />
       <BankControl />
       <PurchasingPower />
-      <OnlineBanking/>
-      <IncludedPersonalBank/>
-
+      <OnlineBanking />
+      <IncludedPersonalBank />
     </div>
   );
 };
