@@ -15,6 +15,7 @@ const FintechPage = () => {
     <>
       <SectionBanner
         heading="Fintech"
+        description="Fintech revolutionizes finance with digital payments, banking, lending, and blockchain for secure, fast, and accessible transactions."
         tailwindClass="text-white"
         backgroundImagePath="/background/blue-gradiant.png"
       />
