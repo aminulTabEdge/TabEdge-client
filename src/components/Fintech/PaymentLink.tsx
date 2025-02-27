@@ -17,18 +17,13 @@ const PaymentLink = () => {
         title="Payment Link"
         description="Easily create and share payment links for seamless transactions."
       />
-
-      {/* Use flex-row for large screens and flex-col for small screens */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
-        {/* Image section */}
         <SideImage src="/Fintech/payment-link.svg" alt="Payement Fintech" />
-
-        {/* Services list */}
         <div className=" space-y-4">
           {paymentLinkServices.map((service, index) => (
             <div key={index} className="flex items-center space-x-3">
               <span className="text-green-600 font-semibold">✔</span>
-              <p className="text-gray-700 text-lg">{service}</p>
+              <p className="text-gray-700 lg:text-lg">{service}</p>
             </div>
           ))}
         </div>

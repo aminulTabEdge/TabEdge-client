@@ -15,7 +15,7 @@ const FintechServices = () => {
           >
             <service.icon size={40} className="text-blue-600" />
             <h3 className="text-lg font-semibold mt-2">{service.title}</h3>
-            <p className="text-sm text-gray-600 text-center mt-1">
+            <p className="text-gray-600 text-center mt-1">
               {service.description}
             </p>
           </div>

@@ -17,17 +17,15 @@ const StartSelling = () => {
         title="Start Selling"
         description="Get your store up and running with seamless product management and sales tracking."
       />
-
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8 ">
         <div className="space-y-4">
           {sellingServices.map((service, index) => (
             <div key={index} className="flex items-center space-x-3">
               <span className="text-green-600 font-semibold">✔</span>
-              <p className="text-gray-700 text-lg">{service}</p>
+              <p className="text-gray-700 lg:text-lg">{service}</p>
             </div>
           ))}
         </div>
-
         <SideImage src="/Fintech/selling.svg" alt="Selling TabEdge" />
       </div>
     </SectionContainer>

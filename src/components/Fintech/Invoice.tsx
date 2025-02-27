@@ -20,18 +20,15 @@ const Invoice = () => {
         title="Invoice Management"
         description="Streamline your billing process with our powerful invoicing system."
       />
-
-      {/* Using flex for better alignment and spacing */}
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8 ">
         <div className="space-y-4">
           {invoiceServices.map((service, index) => (
             <div key={index} className="flex items-center space-x-3">
               <span className="text-blue-600 font-semibold">✔</span>
-              <p className="text-gray-700 text-lg">{service}</p>
+              <p className="text-gray-700 lg:text-lg">{service}</p>
             </div>
           ))}
         </div>
-
         <SideImage src="/Fintech/invoice.svg" alt="Invoice TabEdge" />
       </div>
     </SectionContainer>

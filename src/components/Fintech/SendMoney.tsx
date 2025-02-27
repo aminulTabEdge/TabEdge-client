@@ -26,7 +26,7 @@ const SendMoney = () => {
           {sendMoneyServices.map((service, index) => (
             <div key={index} className="flex items-center space-x-3">
               <span className="text-blue-600 font-semibold">✔</span>
-              <p className="text-gray-700 text-lg">{service}</p>
+              <p className="text-gray-700 lg:text-lg">{service}</p>
             </div>
           ))}
         </div>
