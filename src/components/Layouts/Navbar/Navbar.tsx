@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
-import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -106,16 +105,19 @@ const ResponsiveNavbar = () => {
           {mobileBankingOpen && (
             <ul className="pl-6 space-y-2">
               <li className="hover:text-blue-500 transition">
-                <Link href="/banking">Personal</Link>
+                <Link href="/personal-banking">Personal</Link>
               </li>
               <li className="hover:text-blue-500 transition flex items-center gap-2">
-                <BsArrowRight /> Business
+                <Link href="/business-banking">Business</Link>
               </li>
               <li className="hover:text-blue-500 transition flex items-center gap-2">
-                <BsArrowRight /> Corporate
+                <Link href="/corporate-banking">Corporate</Link>
               </li>
             </ul>
           )}
+          <li className="hover:text-blue-500 transition cursor-pointer">
+            <Link href="/fintech">Fintact</Link>
+          </li>
           <li className="hover:text-blue-500 transition cursor-pointer">
             <Link href="/contact">Contact</Link>
           </li>
