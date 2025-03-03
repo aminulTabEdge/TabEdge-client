@@ -12,7 +12,7 @@ const mobileBankingServices = [
 
 const MobileBanking = () => {
   return (
-    <SectionContainer tailwindClass="container mx-auto">
+    <SectionContainer className="container mx-auto">
       <SectionHeading
         title=" Mobile Banking"
         description="  Manage your finances on-the-go with secure and convenient mobile

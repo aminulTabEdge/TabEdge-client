@@ -1,4 +1,4 @@
-import SectionBanner from "@/components/Banner/SectionBanner";
+import SectionBanner from "@/components/ui/SectionBanner";
 import { Metadata } from "next";
 import React from "react";
 
@@ -13,7 +13,7 @@ const CorporateBanking = () => {
       <SectionBanner
         heading="Corporate Banking"
         description="Take control of your finances with a personal bank account from TabEdge Bank"
-        tailwindClass="text-white "
+        className="text-white "
         backgroundImagePath="/background/blue-gradiant.png"
       />
     </div>

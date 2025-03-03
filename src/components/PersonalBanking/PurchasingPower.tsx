@@ -10,7 +10,10 @@ const features = [
 
 const PurchasingPower = () => {
   return (
-    <SectionContainer backgroundColor="bg-white" tailwindClass="container mx-auto py-12 px-6">
+    <SectionContainer
+      backgroundColor="bg-white"
+      className="container mx-auto py-12 px-6"
+    >
       <SectionHeading
         title="Purchasing Power"
         description="Personal US accounts that give complete purchasing power. With our virtual and physical Visa Infinite debit cards, you can make instant purchases online, in-store, or with a tap of your phone."

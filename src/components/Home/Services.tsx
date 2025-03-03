@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <SectionContainer tailwindClass="container mx-auto px-4">
+    <SectionContainer className="container mx-auto px-4">
       <SectionHeading title="Our Services" />
 
       {/* Responsive Grid Layout */}

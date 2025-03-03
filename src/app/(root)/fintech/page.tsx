@@ -1,4 +1,4 @@
-import SectionBanner from "@/components/Banner/SectionBanner";
+import SectionBanner from "@/components/ui/SectionBanner";
 import FintechServices from "@/components/Fintech/FintechServices";
 import Invoice from "@/components/Fintech/Invoice";
 import MobileBanking from "@/components/Fintech/MobileBanking";
@@ -23,7 +23,7 @@ const FintechPage = () => {
       <SectionBanner
         heading="Fintech"
         description="Fintech revolutionizes finance with digital payments, banking, lending, and blockchain for secure, fast, and accessible transactions."
-        tailwindClass="text-white"
+        className="text-white"
         backgroundImagePath="/background/blue-gradiant.png"
       />
       <FintechServices />

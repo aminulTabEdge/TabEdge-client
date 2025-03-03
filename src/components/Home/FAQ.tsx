@@ -12,7 +12,7 @@ import faqData from "@/lib/constData/FaqData";
 
 const FAQ = () => {
   return (
-    <SectionContainer tailwindClass="container mx-auto">
+    <SectionContainer className="container mx-auto">
       <SectionHeading title="FAQ" />
 
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">

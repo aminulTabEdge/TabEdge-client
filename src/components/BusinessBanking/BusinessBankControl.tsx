@@ -6,7 +6,7 @@ import SectionHeading from "../ui/SectionHeading";
 
 const BussinessBankControl = () => {
   return (
-    <SectionContainer tailwindClass="container mx-auto">
+    <SectionContainer className="container mx-auto">
       <SectionHeading
         title="Online Business Bank Account"
         description="Reduce costs and increase your financial efficiency with a US bank account"

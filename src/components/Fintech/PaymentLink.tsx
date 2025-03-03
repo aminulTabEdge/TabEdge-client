@@ -12,7 +12,7 @@ const paymentLinkServices = [
 
 const PaymentLink = () => {
   return (
-    <SectionContainer tailwindClass="container mx-auto">
+    <SectionContainer className="container mx-auto">
       <SectionHeading
         title="Payment Link"
         description="Easily create and share payment links for seamless transactions."

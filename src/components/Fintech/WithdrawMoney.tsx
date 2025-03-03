@@ -12,10 +12,7 @@ const withdrawMoneyServices = [
 
 const WithdrawMoney = () => {
   return (
-    <SectionContainer
-      backgroundColor="bg-white"
-      tailwindClass="container mx-auto"
-    >
+    <SectionContainer backgroundColor="bg-white" className="container mx-auto">
       <SectionHeading
         title="Withdraw Money"
         description=" Withdraw your funds quickly, securely, and hassle-free."

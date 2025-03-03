@@ -6,7 +6,7 @@ import BankControlCard from "./BankConreolCard";
 
 const BankControl = () => {
   return (
-    <SectionContainer tailwindClass="bg-gradient-to-r from-blue-50 to-blue-100">
+    <SectionContainer className="bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container mx-auto px-4">
         <SectionHeading title="TabEdge Bank" />
         {/* Responsive Grid Layout */}

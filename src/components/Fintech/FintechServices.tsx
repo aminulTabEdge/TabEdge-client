@@ -5,7 +5,7 @@ import SectionHeading from "../ui/SectionHeading";
 
 const FintechServices = () => {
   return (
-    <SectionContainer tailwindClass="container mx-auto">
+    <SectionContainer className="container mx-auto">
       <SectionHeading title="Our Fintech Services" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
         {fintechServices.map((service, index) => (

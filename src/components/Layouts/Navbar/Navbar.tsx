@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-import { CiMenuFries } from "react-icons/ci";
+// import { MdKeyboardArrowDown } from "react-icons/md";
+// import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
 
 const ResponsiveNavbar = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const [mobileBankingOpen, setMobileBankingOpen] = useState(false);
-  const [desktopBankingOpen, setDesktopBankingOpen] = useState(false);
+  // const [mobileBankingOpen, setMobileBankingOpen] = useState(false);
+  // const [desktopBankingOpen, setDesktopBankingOpen] = useState(false);
 
   return (
     <nav className="flex items-center justify-between w-full sticky top-0 left-0 z-50 bg-white shadow-md px-4 md:px-8">
@@ -32,7 +33,7 @@ const ResponsiveNavbar = () => {
         <li className="hover:text-blue-500 transition cursor-pointer">
           <Link href="/">Home</Link>
         </li>
-        <li
+        {/* <li
           className="relative flex items-center gap-1 cursor-pointer hover:text-blue-500"
           onMouseEnter={() => setDesktopBankingOpen(true)}
           onMouseLeave={() => setDesktopBankingOpen(false)}
@@ -53,6 +54,9 @@ const ResponsiveNavbar = () => {
               </ul>
             </div>
           )}
+        </li> */}
+        <li className="hover:text-blue-500 transition cursor-pointer">
+          <Link href="/about">About</Link>
         </li>
         <li className="hover:text-blue-500 transition cursor-pointer">
           <Link href="/fintech">Fintech</Link>
@@ -70,7 +74,7 @@ const ResponsiveNavbar = () => {
       </Link>
 
       {/* Mobile Menu Toggle */}
-      <CiMenuFries
+      <Menu
         className="text-2xl text-gray-700 cursor-pointer md:hidden"
         onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
       />
@@ -91,11 +95,11 @@ const ResponsiveNavbar = () => {
           <li className="hover:text-blue-500 transition cursor-pointer">
             <Link href="/">Home</Link>
           </li>
-          <li
+          {/* <li
             className="hover:text-blue-500 transition cursor-pointer flex items-center gap-2"
             onClick={() => setMobileBankingOpen(!mobileBankingOpen)}
           >
-            Banking{" "}
+            Banking
             <IoIosArrowDown
               className={`transition ${
                 mobileBankingOpen ? "rotate-180" : "rotate-0"
@@ -114,12 +118,20 @@ const ResponsiveNavbar = () => {
                 <Link href="/corporate-banking">Corporate</Link>
               </li>
             </ul>
-          )}
+          )} */}
+          <li className="hover:text-blue-500 transition cursor-pointer">
+            <Link href="/about">About</Link>
+          </li>
           <li className="hover:text-blue-500 transition cursor-pointer">
             <Link href="/fintech">Fintact</Link>
           </li>
           <li className="hover:text-blue-500 transition cursor-pointer">
             <Link href="/contact">Contact</Link>
+          </li>
+          <li className="hover:text-blue-500 transition cursor-pointer">
+            <Link href="https://portal.tabedge.com/login">
+              <Button>Account</Button>
+            </Link>
           </li>
         </ul>
       </aside>

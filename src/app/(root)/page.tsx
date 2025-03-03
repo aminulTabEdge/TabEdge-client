@@ -1,13 +1,14 @@
 import BankControl from "@/components/shared/BankControl";
 import ContactUs from "@/components/ContactUs/ContactUs";
 import FAQ from "@/components/Home/FAQ";
-import HeroBanner from "@/components/Banner/HeroBanner";
+import HeroBanner from "@/components/Home/HeroBanner";
 import IncludedTabEdgeAccount from "@/components/Home/IncludedTabEdgeAccount";
-import Services from "@/components/Home/Services";
+// import Services from "@/components/Home/Services";
 import WhyTabEdge from "@/components/Home/WhyTabEdge";
 import React from "react";
 import GetServices from "@/components/Home/GetServices";
 import { Metadata } from "next";
+import Geography from "@/components/shared/Geography";
 
 export const metadata: Metadata = {
   title: "Home | TabEdge",
@@ -19,8 +20,9 @@ const HomePage = () => {
   return (
     <>
       <HeroBanner />
-      <Services />
+      {/* <Services /> */}
       <BankControl />
+      <Geography />
       <WhyTabEdge />
       <IncludedTabEdgeAccount />
       <GetServices />

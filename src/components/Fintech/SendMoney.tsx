@@ -12,10 +12,7 @@ const sendMoneyServices = [
 
 const SendMoney = () => {
   return (
-    <SectionContainer
-      backgroundColor="bg-white"
-      tailwindClass="container mx-auto"
-    >
+    <SectionContainer backgroundColor="bg-white" className="container mx-auto">
       <SectionHeading
         title="Send Money"
         description=" Send money securely and instantly, wherever you are."

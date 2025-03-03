@@ -13,7 +13,7 @@ const AboutBussinessBanking = () => {
   return (
     <SectionContainer
       backgroundColor="bg-white"
-      tailwindClass="container mx-auto py-12 px-6"
+      className="container mx-auto py-12 px-6"
     >
       <SectionHeading
         title="Business Banking Solutions"
@@ -24,7 +24,10 @@ const AboutBussinessBanking = () => {
         {/* Text Section */}
         <ul className="space-y-3 text-gray-700">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-start gap-2 max-w-lg text-justify">
+            <li
+              key={index}
+              className="flex items-start gap-2 max-w-lg text-justify"
+            >
               <span className="text-blue-500 font-bold">•</span>
               {feature}
             </li>

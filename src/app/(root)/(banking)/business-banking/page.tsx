@@ -1,4 +1,4 @@
-import SectionBanner from "@/components/Banner/SectionBanner";
+import SectionBanner from "@/components/ui/SectionBanner";
 import AboutBussinessBanking from "@/components/BusinessBanking/AboutBussinessBanking";
 import BussinessBankControl from "@/components/BusinessBanking/BusinessBankControl";
 import Documents from "@/components/BusinessBanking/Documents";
@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 
 const BussinessBanking = () => {
   return (
-    <div>
+    <>
       <SectionBanner
         heading="Business Banking"
         description="Open a U.S. business bank online. No need to be a U.S. registered company, citizen or residen"
-        tailwindClass="text-white "
+        className="text-white "
         backgroundImagePath="/background/blue-gradiant.png"
       />
       <BussinessBankControl />
       <AboutBussinessBanking />
       <IncluedBusinessBanking />
       <Documents />
-    </div>
+    </>
   );
 };
 

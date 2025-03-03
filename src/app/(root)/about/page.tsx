@@ -1,0 +1,33 @@
+import Conclusion from "@/components/About/Conclusion";
+import Geography from "@/components/shared/Geography";
+import Mission from "@/components/About/Mission";
+import Problem from "@/components/About/Problem";
+import Vision from "@/components/About/Vision";
+import SectionBanner from "@/components/ui/SectionBanner";
+import React from "react";
+
+const AboutPage = () => {
+  return (
+    <>
+      <SectionBanner
+        backgroundImagePath="/background/blue-gradiant.png"
+        className="text-white "
+        heading="About"
+        description="TabEdge is a digital banking platform offering online banking, virtual Visa cards, prepaid cards, and international debit cards."
+      />
+
+      <Mission />
+      <Vision />
+      <SectionBanner
+        className="text-white"
+        backgroundImagePath="/background/blue-gradiant.png"
+        heading="Challenges in International Transactions"
+      />
+      <Problem />
+      <Geography />
+      <Conclusion />
+    </>
+  );
+};
+
+export default AboutPage;

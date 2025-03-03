@@ -3,19 +3,19 @@ import React from "react";
 type SectionBannerProps = {
   heading?: string;
   description?: string;
-  tailwindClass?: string;
+  className?: string;
   backgroundImagePath?: string;
 };
 
 const SectionBanner: React.FC<SectionBannerProps> = ({
   heading,
   description,
-  tailwindClass,
+  className,
   backgroundImagePath,
 }) => {
   return (
     <div
-      className={`${tailwindClass} relative w-full h-64 bg-cover bg-center  flex items-center justify-center `}
+      className={`${className} relative w-full h-64 bg-cover bg-center  flex items-center justify-center `}
       style={{
         backgroundImage: backgroundImagePath
           ? `url('${backgroundImagePath}')`
