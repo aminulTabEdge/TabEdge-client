@@ -1,4 +1,5 @@
-"use client";
+"use client"; // Ensure it's at the very top
+
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "@/components/ui/input";
@@ -12,6 +13,7 @@ import Swal from "sweetalert2";
 interface IFormInput {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -34,7 +36,7 @@ const ContactForm: React.FC = () => {
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       console.log("Form Data Submitted: ", data);
-      await reset();
+      reset(); // No need for `await` here
       Swal.fire({
         title: "Good job!",
         text: "Message Sent Successfully!",
@@ -48,7 +50,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-lg w-full mx-auto  sm:p-6 lg:p-8">
+    <div className="max-w-lg w-full mx-auto sm:p-6 lg:p-8">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
         Contact Us
       </h2>
@@ -91,6 +93,22 @@ const ContactForm: React.FC = () => {
             )}
           </div>
 
+          {/* Subject Input */}
+          <div>
+            <Label htmlFor="subject">Subject</Label>
+            <Input
+              id="subject"
+              placeholder="Your Subject"
+              {...register("subject", { required: "Subject is required" })}
+              className="mt-2"
+            />
+            {errors.subject && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.subject.message}
+              </p>
+            )}
+          </div>
+
           {/* Message Input */}
           <div>
             <Label htmlFor="message">Message</Label>
@@ -107,7 +125,7 @@ const ContactForm: React.FC = () => {
             )}
           </div>
 
-          {/* Submit Butto n */}
+          {/* Submit Button */}
           <Button
             type="submit"
             className="mt-4 w-full flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 transition-all"
