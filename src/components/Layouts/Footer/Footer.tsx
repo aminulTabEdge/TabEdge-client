@@ -1,40 +1,58 @@
 import Image from "next/image";
 import React from "react";
 
+import Link from "next/link";
+
 const Footer = () => {
   return (
-    <div>
-      <footer className="bg-black text-white p-10 flex flex-wrap justify-between">
-        <aside className="flex flex-col items-start space-y-2">
+    <footer className="bg-gray-900 text-white py-8 px-6 md:px-12">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col items-center md:items-start space-y-4 md:space-y-0 md:flex-row md:space-x-12">
           <Image
             src={"/logo.webp"}
             alt="logo of TabEdge"
             height={180}
             width={180}
+            className="rounded-lg"
           />
-        </aside>
-        <nav className="flex flex-col space-y-1">
-          <h6 className="text-lg font-bold">Services</h6>
-          <a className="hover:underline">Branding</a>
-          <a className="hover:underline">Design</a>
-          <a className="hover:underline">Marketing</a>
-          <a className="hover:underline">Advertisement</a>
-        </nav>
-        <nav className="flex flex-col space-y-1">
-          <h6 className="text-lg font-bold">Company</h6>
-          <a className="hover:underline">About us</a>
-          <a className="hover:underline">Contact</a>
-          <a className="hover:underline">Jobs</a>
-          <a className="hover:underline">Press kit</a>
-        </nav>
-        <nav className="flex flex-col space-y-1">
-          <h6 className="text-lg font-bold">Legal</h6>
-          <a className="hover:underline">Terms of use</a>
-          <a className="hover:underline">Privacy policy</a>
-          <a className="hover:underline">Cookie policy</a>
-        </nav>
-      </footer>
-    </div>
+        </div>
+
+        <div className="flex flex-wrap justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-12">
+          <nav className="flex flex-col items-center md:items-start">
+            <h6 className="text-lg font-bold mb-2">Services</h6>
+            <Link href="/branding" className="hover:underline mb-1">
+              Branding
+            </Link>
+            <Link href="/design" className="hover:underline mb-1">
+              Design
+            </Link>
+            <Link href="/marketing" className="hover:underline mb-1">
+              Marketing
+            </Link>
+            <Link href="/advertisement" className="hover:underline">
+              Advertisement
+            </Link>
+          </nav>
+
+          <nav className="flex flex-col items-center md:items-start">
+            <h6 className="text-lg font-bold mb-2">Legal</h6>
+            <Link href="/terms" className="hover:underline mb-1">
+              Terms of use
+            </Link>
+            <Link href="/privacy" className="hover:underline mb-1">
+              Privacy policy
+            </Link>
+            <Link href="/cookies" className="hover:underline">
+              Cookie policy
+            </Link>
+          </nav>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2025 TabEdge. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 

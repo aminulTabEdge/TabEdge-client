@@ -9,7 +9,7 @@ const Vision = () => {
       <SectionHeading title="🚀 Our Vision" />
 
       {/* Mission Statement */}
-      <p className="text-lg">
+      <p className="text-lg text-justify">
         TabEdge envisions a world where financial transactions are borderless,
         effortless, and universally accessible. Our vision is to lead the
         transformation of the financial industry by fostering an inclusive

@@ -15,14 +15,13 @@ const features = [
     icon: <TbLicense className="text-5xl text-green-400" />,
     title: "Licensed & Regulated",
     description:
-      "Bank with confidence, knowing our operations are fully regulated.",
+      "Transaction with confidence, knowing our operations are fully regulated.",
   },
   {
     id: 3,
     icon: <RiBankLine className="text-5xl text-blue-400" />,
     title: "Protected Funds",
-    description:
-      "We are a full reserve bank. 100% of your funds are kept in the bank at all times.",
+    description: "100% of your funds are kept in the bank at all times.",
   },
 ];
 
@@ -34,10 +33,10 @@ const WhyTabEdge = () => {
 
       <div className="relative w-full max-w-7xl mx-auto text-white text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-          Why Bank with TabEdge?
+          Why TabEdge?
         </h1>
         <p className="mt-4 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-          Enjoy seamless international banking with our secure, fast, and
+          Enjoy seamless international transactions with our secure, fast, and
           reliable services.
         </p>
 

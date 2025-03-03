@@ -2,10 +2,14 @@ import React from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 const contactDetails = [
-  { id: 1, icon: FaPhone, text: "+1 234 567 890" },
-  { id: 2, icon: FaEnvelope, text: "support@example.com" },
-  { id: 3, icon: FaMapMarkerAlt, text: "123 Main Street, City, Country" },
-  { id: 4, icon: FaClock, text: "Mon - Fri: 9:00 AM - 6:00 PM" },
+  { id: 1, icon: FaPhone, text: "+1 302 946 0678" },
+  { id: 2, icon: FaEnvelope, text: "info@tabedge.com" },
+  {
+    id: 3,
+    icon: FaMapMarkerAlt,
+    text: "2261 Market Street STE 5926, San Francisco, CA, United State, 94114",
+  },
+  { id: 4, icon: FaClock, text: "Mon - Sat : 9:00 AM - 6:00 PM" },
 ];
 
 const ContactInfo = () => {
