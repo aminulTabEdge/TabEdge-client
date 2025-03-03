@@ -1,56 +1,71 @@
-import Image from "next/image";
 import React from "react";
-
 import Link from "next/link";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 px-6 md:px-12">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="flex flex-col items-center md:items-start space-y-4 md:space-y-0 md:flex-row md:space-x-12">
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-6 md:px-12 grid  grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Logo and Description */}
+        <div>
           <Image
-            src={"/logo.webp"}
-            alt="logo of TabEdge"
-            height={180}
-            width={180}
-            className="rounded-lg"
+            src="/logo.webp"
+            width={220}
+            height={60}
+            alt="Tab Statup logo png"
           />
         </div>
 
-        <div className="flex flex-wrap justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-12">
-          <nav className="flex flex-col items-center md:items-start">
-            <h6 className="text-lg font-bold mb-2">Services</h6>
-            <Link href="/branding" className="hover:underline mb-1">
-              Branding
-            </Link>
-            <Link href="/design" className="hover:underline mb-1">
-              Design
-            </Link>
-            <Link href="/marketing" className="hover:underline mb-1">
-              Marketing
-            </Link>
-            <Link href="/advertisement" className="hover:underline">
-              Advertisement
-            </Link>
-          </nav>
+        {/* Navigation Links */}
+        <div className="flex flex-col space-y-2">
+          <h3 className="text-lg font-semibold">Quick Links</h3>
+          <Link href="/about" className="text-gray-400 hover:text-white">
+            About Us
+          </Link>
+          <Link href="/fintech" className="text-gray-400 hover:text-white">
+            Fintech
+          </Link>
+          <Link href="/contact" className="text-gray-400 hover:text-white">
+            Contact
+          </Link>
+        </div>
+        {/* Navigation Links */}
+        <div className="flex flex-col space-y-2">
+          <h3 className="text-lg font-semibold">Quick Links</h3>
+          <Link href="/about" className="text-gray-400 hover:text-white">
+            About Us
+          </Link>
+          <Link href="/fintech" className="text-gray-400 hover:text-white">
+            Fintech
+          </Link>
+          <Link href="/contact" className="text-gray-400 hover:text-white">
+            Contact
+          </Link>
+        </div>
 
-          <nav className="flex flex-col items-center md:items-start">
-            <h6 className="text-lg font-bold mb-2">Legal</h6>
-            <Link href="/terms" className="hover:underline mb-1">
-              Terms of use
-            </Link>
-            <Link href="/privacy" className="hover:underline mb-1">
-              Privacy policy
-            </Link>
-            <Link href="/cookies" className="hover:underline">
-              Cookie policy
-            </Link>
-          </nav>
+        {/* Social Media Links */}
+        <div>
+          <h3 className="text-lg font-semibold">Follow Us</h3>
+          <div className="flex space-x-4 mt-2">
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Facebook />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Twitter />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Instagram />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Linkedin />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="mt-8 text-center text-sm text-gray-400">
-        <p>&copy; 2025 TabEdge. All rights reserved.</p>
+      <div className="text-center text-gray-500 mt-8 text-sm">
+        &copy; {new Date().getFullYear()} TabEdge. All Rights Reserved.
       </div>
     </footer>
   );
