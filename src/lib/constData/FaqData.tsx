@@ -1,31 +1,33 @@
 const faqData = [
   {
     value: "item-1",
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    question: "What services does TabEdge offer?",
+    answer:
+      "TabEdge provides online banking, virtual Visa cards, prepaid Visa cards, and international debit cards for secure global transactions.",
   },
   {
     value: "item-2",
-    question: "How do I sign up?",
+    question: "How can I get a virtual Visa card with TabEdge?",
     answer:
-      "You can sign up by clicking the Sign Up button at the top right of the page.",
+      "You can instantly generate a virtual Visa card through your TabEdge account, allowing safe and convenient online transactions.",
   },
   {
     value: "item-3",
-    question: "What payment methods are accepted?",
-    answer: "We accept credit cards, PayPal, and bank transfers.",
+    question: "Is TabEdge secure for online transactions?",
+    answer:
+      "Yes, TabEdge ensures secure transactions with Visa and Mastercard integration, encryption, and fraud protection measures.",
   },
   {
     value: "item-4",
-    question: "Can I change my subscription plan?",
+    question: "Can I use TabEdge for international payments?",
     answer:
-      "Yes, you can change your plan at any time from your account settings.",
+      "Yes, TabEdge cards support international payments, making it easy to transact globally without restrictions.",
   },
   {
     value: "item-5",
-    question: "How can I contact support?",
+    question: "How do I open a TabEdge account?",
     answer:
-      "You can contact support via email at support@example.com or call us at +1 234 567 890.",
+      "You can sign up for a TabEdge account online by providing your basic details and verifying your identity.",
   },
 ];
 
