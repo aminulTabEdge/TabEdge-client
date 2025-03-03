@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
             <Label htmlFor="subject">Subject</Label>
             <Input
               id="subject"
-              placeholder="Your Subject"
+              placeholder="Subject"
               {...register("subject", { required: "Subject is required" })}
               className="mt-2"
             />
