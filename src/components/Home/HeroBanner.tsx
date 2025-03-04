@@ -5,7 +5,7 @@ const HeroBanner = () => {
   return (
     <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[80vh]">
       <Image
-        src="/home/hero-banner2.png"
+        src="/assets/home/hero-banner2.png"
         alt="Tabedge Hero banner"
         fill
         className="object-cover"

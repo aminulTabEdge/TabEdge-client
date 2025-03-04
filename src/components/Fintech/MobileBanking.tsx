@@ -28,7 +28,7 @@ const MobileBanking = () => {
           ))}
         </div>
         <SideImage
-          src="/Fintech/mobile-banking.svg"
+          src="/assets/fintech/mobile-banking.svg"
           alt="Mobile Banking Tabedge"
         />
       </div>

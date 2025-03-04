@@ -21,7 +21,7 @@ const OnlineBanking = () => {
         {/* Image */}
         <div className="w-full max-w-[500px]">
           <Image
-            src="/gif/online-banking.gif"
+            src="/assets/gif/online-banking.gif"
             width={500}
             height={500}
             alt="Online payment"

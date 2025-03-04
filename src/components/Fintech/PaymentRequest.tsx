@@ -27,7 +27,7 @@ const PaymentRequest = () => {
           ))}
         </div>
         <SideImage
-          src="/Fintech/payment-request.svg"
+          src="/assets/fintech/payment-request.svg"
           alt="Payment Information TabEdge"
         />
       </div>

@@ -19,7 +19,7 @@ const FAQ = () => {
         {/* FAQ Image */}
         <div className="mx-auto">
           <Image
-            src={"/logos/FAQ.png"}
+            src={"/assets/logos/FAQ.png"}
             width={500}
             height={500}
             alt="FAQ image of TabEdge"

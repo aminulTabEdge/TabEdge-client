@@ -24,7 +24,7 @@ const FintechPage = () => {
         heading="Fintech"
         description="Fintech revolutionizes finance with digital payments, banking, lending, and blockchain for secure, fast, and accessible transactions."
         className="text-white"
-        backgroundImagePath="/background/blue-gradiant.png"
+        backgroundImagePath="/assets/background/blue-gradiant.png"
       />
       <FintechServices />
       <Invoice />

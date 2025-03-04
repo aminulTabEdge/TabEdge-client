@@ -33,7 +33,7 @@ const PurchasingPower = () => {
         {/* Image Section */}
         <div className="w-full max-w-[500px]">
           <Image
-            src="/gif/payment-information.gif"
+            src="/assets/gif/payment-information.gif"
             width={500}
             height={500}
             alt="Payment Information TabEdge"

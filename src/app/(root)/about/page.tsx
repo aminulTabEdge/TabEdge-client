@@ -16,7 +16,7 @@ const AboutPage = () => {
   return (
     <>
       <SectionBanner
-        backgroundImagePath="/background/blue-gradiant.png"
+        backgroundImagePath="/assets/background/blue-gradiant.png"
         className="text-white "
         heading="About"
         description="TabEdge is a digital banking platform offering online banking, virtual Visa cards, prepaid cards, and international debit cards."
@@ -26,7 +26,7 @@ const AboutPage = () => {
       <Vision />
       <SectionBanner
         className="text-white"
-        backgroundImagePath="/background/blue-gradiant.png"
+        backgroundImagePath="/assets/background/blue-gradiant.png"
         heading="Challenges in International Transactions"
       />
       <Problem />

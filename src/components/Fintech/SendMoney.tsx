@@ -18,7 +18,7 @@ const SendMoney = () => {
         description=" Send money securely and instantly, wherever you are."
       />
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8 ">
-        <SideImage src="/Fintech/send-money.svg" alt="Send Money TabEdge" />
+        <SideImage src="/assets/fintech/send-money.svg" alt="Send Money TabEdge" />
         <div className="space-y-4">
           {sendMoneyServices.map((service, index) => (
             <div key={index} className="flex items-center space-x-3">

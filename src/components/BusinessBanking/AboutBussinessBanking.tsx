@@ -37,7 +37,7 @@ const AboutBussinessBanking = () => {
         {/* Image Section */}
         <div className="w-full max-w-[500px]">
           <Image
-            src="/gif/cash-payment.gif"
+            src="/assets/gif/cash-payment.gif"
             width={500}
             height={500}
             alt="Payment Information TabEdge"

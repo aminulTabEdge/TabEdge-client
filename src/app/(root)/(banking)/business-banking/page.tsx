@@ -18,7 +18,7 @@ const BussinessBanking = () => {
         heading="Business Banking"
         description="Open a U.S. business bank online. No need to be a U.S. registered company, citizen or residen"
         className="text-white "
-        backgroundImagePath="/background/blue-gradiant.png"
+        backgroundImagePath="/assets/background/blue-gradiant.png"
       />
       <BussinessBankControl />
       <AboutBussinessBanking />

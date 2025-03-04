@@ -9,7 +9,7 @@ const NotFound = () => {
       <div className="rounded-lg p-8 max-w-sm w-full">
         {/* Next.js 15 Image Fix */}
         <Image
-          src="/error/404.svg"
+          src="/assets/error/404.svg"
           alt="Error 404"
           width={0}
           height={0}

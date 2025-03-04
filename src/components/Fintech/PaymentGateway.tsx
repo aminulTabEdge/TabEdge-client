@@ -27,7 +27,7 @@ const PaymentGateway = () => {
           ))}
         </div>
         <SideImage
-          src="/Fintech/payment-gateway.svg"
+          src="/assets/fintech/payment-gateway.svg"
           alt="payement gateway TabEdge"
         />
       </div>

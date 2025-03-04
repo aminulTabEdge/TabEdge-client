@@ -26,7 +26,7 @@ const Invoice = () => {
             </div>
           ))}
         </div>
-        <SideImage src="/Fintech/invoice.svg" alt="Invoice TabEdge" />
+        <SideImage src="/assets/fintech/invoice.svg" alt="Invoice TabEdge" />
       </div>
     </SectionContainer>
   );

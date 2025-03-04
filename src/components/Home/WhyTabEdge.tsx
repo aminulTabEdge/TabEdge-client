@@ -27,7 +27,7 @@ const features = [
 
 const WhyTabEdge = () => {
   return (
-    <div className="relative bg-[url('/background/building.png')] bg-local md:bg-fixed bg-center bg-cover h-auto min-h-[550px] flex items-center justify-center py-16 px-4">
+    <div className="relative bg-[url('/assets/background/building.png')] bg-local md:bg-fixed bg-center bg-cover h-auto min-h-[550px] flex items-center justify-center py-16 px-4">
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/50"></div>
 

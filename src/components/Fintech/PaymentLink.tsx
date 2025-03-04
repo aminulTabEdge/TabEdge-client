@@ -18,7 +18,7 @@ const PaymentLink = () => {
         description="Easily create and share payment links for seamless transactions."
       />
       <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
-        <SideImage src="/Fintech/payment-link.svg" alt="Payement Fintech" />
+        <SideImage src="/assets/fintech/payment-link.svg" alt="Payement Fintech" />
         <div className=" space-y-4">
           {paymentLinkServices.map((service, index) => (
             <div key={index} className="flex items-center space-x-3">

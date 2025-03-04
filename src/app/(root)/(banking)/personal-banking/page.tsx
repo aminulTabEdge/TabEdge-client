@@ -18,7 +18,7 @@ const PersonalBanking = () => {
         heading="Personal Banking"
         description="Take control of your finances with a personal bank account from TabEdge Bank "
         className="text-white "
-        backgroundImagePath="/background/blue-gradiant.png"
+        backgroundImagePath="/assets/background/blue-gradiant.png"
       />
       <BankControl />
       <PurchasingPower />

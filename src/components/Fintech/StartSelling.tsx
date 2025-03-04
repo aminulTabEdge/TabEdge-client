@@ -26,7 +26,7 @@ const StartSelling = () => {
             </div>
           ))}
         </div>
-        <SideImage src="/Fintech/selling.svg" alt="Selling TabEdge" />
+        <SideImage src="/assets/fintech/selling.svg" alt="Selling TabEdge" />
       </div>
     </SectionContainer>
   );
