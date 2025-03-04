@@ -14,7 +14,7 @@ const StartSelling = () => {
   return (
     <SectionContainer>
       <SectionHeading
-        title="Start Selling"
+        title="Products Selling"
         description="Get your store up and running with seamless product management and sales tracking."
       />
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8 ">

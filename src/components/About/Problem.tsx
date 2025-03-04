@@ -16,16 +16,6 @@ const Problem = () => {
           </div>
         ))}
       </div>
-      <div className="mt-12 text-center">
-        <h2 className="text-xl font-bold">
-          TabEdge recognizes these challenges as opportunities for
-          transformation.
-        </h2>
-        <p className="text-gray-600 ">
-          Join us as we pave the way for a future where these obstacles no
-          longer hinder global financial interactions.
-        </p>
-      </div>
     </SectionContainer>
   );
 };

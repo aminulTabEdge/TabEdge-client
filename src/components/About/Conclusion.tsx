@@ -4,25 +4,35 @@ import SectionContainer from "../ui/SectionContainer";
 
 const Conclusion = () => {
   return (
-    <SectionContainer className="max-w-5xl mx-auto">
-      <p className="text-lg text-justify">
-        TabEdge is more than just a fintech platform; it's a vision realized by
-        the dynamic leadership of our founder, Shah Mubaruk. His technical
-        prowess and entrepreneurial spirit are the driving forces behind the
-        innovative solutions offered by TabEdge. As we embark on this
-        transformative journey, we envision a future where financial
-        transactions transcend borders and limitations. TabEdge's commitment to
-        user-centric design, cutting-edge technology, and strategic partnerships
-        positions us as a key player in reshaping the global financial
-        landscape. Join us in this exciting venture, where every investment
-        contributes to the realization of a more connected, accessible, and
-        secure world of cross-border transactions. TabEdge is not just
-        redefining the way we transact; it's pioneering a movement towards
-        financial empowerment and inclusivity. Join & Invest in TabEdge – where
-        the vision for a borderless, limitless financial future becomes a
-        reality. Together, we are shaping the next chapter in fintech
-        innovation.
-      </p>
+    <SectionContainer
+      className="max-w-4xl mx-auto text-center"
+      backgroundColor="bg-white"
+    >
+      <div className="space-y-6">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+          A Vision Beyond Borders
+        </h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          TabEdge is more than a fintech platform; it's a revolution led by the
+          visionary <span className="font-semibold">Shah Mubaruk</span>. His
+          technical acumen and entrepreneurial drive power the cutting-edge
+          solutions that define our mission.
+        </p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          We are not just shaping transactions—we are redefining financial
+          freedom. With a focus on
+          <span className="font-semibold">user-centric design</span>,
+          <span className="font-semibold">innovative technology</span>, and
+          <span className="font-semibold">strategic collaborations</span>,
+          TabEdge is poised to transform global finance.
+        </p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          Invest in TabEdge—where the dream of a
+          <span className="font-semibold">borderless, limitless</span> financial
+          future is becoming reality. Together, we are shaping the next era of
+          fintech innovation.
+        </p>
+      </div>
     </SectionContainer>
   );
 };
