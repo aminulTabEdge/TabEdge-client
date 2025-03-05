@@ -1,4 +1,4 @@
-"use client"; // Ensure it's at the very top
+"use client";
 
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { BsSendFill } from "react-icons/bs";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 // Define the form input types
 interface IFormInput {
@@ -20,7 +21,7 @@ interface IFormInput {
 const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
-  // Set up the React Hook Form
+  // Set up React Hook Form
   const {
     register,
     handleSubmit,
@@ -28,22 +29,31 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<IFormInput>();
 
-  // Handle form submission
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     setLoading(true);
     try {
-      // Simulating an API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Send form data to the backend using Axios
+      const response = await axios.post(
+        "https://data.tabedge.com/v1/contact/create",
+        data,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-      console.log("Form Data Submitted: ", data);
-      reset(); // No need for `await` here
+      console.log("Response:", response.data);
+      reset();
+
       Swal.fire({
-        title: "Good job!",
+        title: "Success!",
         text: "Message Sent Successfully!",
         icon: "success",
       });
     } catch (error) {
-      console.error("Error submitting form", error);
+      console.log(error);
+      Swal.fire({
+        title: "Error",
+        text: "Failed to send message. Please try again later.",
+        icon: "error",
+      });
     } finally {
       setLoading(false);
     }
